@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0B6A2621CD87E9C003475E0 /* CammeraView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B6A2611CD87E9C003475E0 /* CammeraView.m */; };
+		F0B6A2651CD87F41003475E0 /* AvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B6A2641CD87F41003475E0 /* AvatarView.m */; };
 		F0C99A3E1CD793E80051C7D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A3D1CD793E80051C7D9 /* AppDelegate.m */; };
 		F0C99A411CD793E80051C7D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A401CD793E80051C7D9 /* main.m */; };
 		F0C99A441CD793E80051C7D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A431CD793E80051C7D9 /* ViewController.m */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F0B6A2601CD87E9C003475E0 /* CammeraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CammeraView.h; sourceTree = "<group>"; };
+		F0B6A2611CD87E9C003475E0 /* CammeraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CammeraView.m; sourceTree = "<group>"; };
+		F0B6A2631CD87F41003475E0 /* AvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarView.h; sourceTree = "<group>"; };
+		F0B6A2641CD87F41003475E0 /* AvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarView.m; sourceTree = "<group>"; };
 		F0C99A391CD793E80051C7D9 /* Avatar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avatar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C99A3C1CD793E80051C7D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F0C99A3D1CD793E80051C7D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -107,6 +113,10 @@
 				F0C99A471CD793E90051C7D9 /* Main.storyboard */,
 				F0C99A4A1CD793E90051C7D9 /* Info.plist */,
 				F0C99A3F1CD793E80051C7D9 /* Supporting Files */,
+				F0B6A2601CD87E9C003475E0 /* CammeraView.h */,
+				F0B6A2611CD87E9C003475E0 /* CammeraView.m */,
+				F0B6A2631CD87F41003475E0 /* AvatarView.h */,
+				F0B6A2641CD87F41003475E0 /* AvatarView.m */,
 			);
 			path = Avatar;
 			sourceTree = "<group>";
@@ -267,8 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0C99A441CD793E80051C7D9 /* ViewController.m in Sources */,
+				F0B6A2621CD87E9C003475E0 /* CammeraView.m in Sources */,
 				F0C99A411CD793E80051C7D9 /* main.m in Sources */,
 				F0C99A3E1CD793E80051C7D9 /* AppDelegate.m in Sources */,
+				F0B6A2651CD87F41003475E0 /* AvatarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +501,7 @@
 				F0C99A651CD793E90051C7D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0C99A661CD793E90051C7D9 /* Build configuration list for PBXNativeTarget "AvatarTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +510,7 @@
 				F0C99A681CD793E90051C7D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0C99A691CD793E90051C7D9 /* Build configuration list for PBXNativeTarget "AvatarUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +519,7 @@
 				F0C99A6B1CD793E90051C7D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
