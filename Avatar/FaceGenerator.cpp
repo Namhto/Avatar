@@ -9,9 +9,9 @@
 #include "../../dlib-18.18/dlib/image_processing/render_face_detections.h"
 #include "../../dlib-18.18/dlib/image_processing.h"
 #include "../../dlib-18.18/dlib/gui_widgets.h"
-#include "../../dlib-18.18/dlib/image_io.h"*/
+#include "../../dlib-18.18/dlib/image_io.h"
 #include <iostream>
-//using namespace dlib;
+using namespace dlib;
 using namespace std;
 #include "FaceGenerator.hpp"
 #include <string>
@@ -39,7 +39,7 @@ void FaceGenerator::generateFace(string path, string predictor) {
         // around all the faces in the image.
         std::vector<rectangle> dets = detector(img);
         cout << "Number of faces detected: " << dets.size() << endl;
-        
+    
         // Now we will go ask the shape_predictor to tell us the pose of
         // each face we detected.
         std::vector<full_object_detection> shapes;
@@ -65,7 +65,4 @@ void FaceGenerator::generateFace(string path, string predictor) {
         dlib::array<array2d<rgb_pixel> > face_chips;
         extract_image_chips(img, get_face_chip_details(shapes), face_chips);
         win_faces.set_image(tile_images(face_chips));
-        
-        cout << "Hit enter to process the next image..." << endl;
-        cin.get();
-}
+}*/

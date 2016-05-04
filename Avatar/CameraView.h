@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface CammeraView : NSView
+@interface CameraView : NSView
 
 @end

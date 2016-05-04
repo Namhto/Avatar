@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F001D9CF1CD8D2E100D71E33 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F001D9CE1CD8D2E100D71E33 /* ViewController.mm */; };
 		F04761921CD89D4D00B7AA41 /* FaceGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F04761901CD89D4D00B7AA41 /* FaceGenerator.cpp */; };
-		F0B6A2621CD87E9C003475E0 /* CammeraView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B6A2611CD87E9C003475E0 /* CammeraView.m */; };
+		F0B6A2621CD87E9C003475E0 /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B6A2611CD87E9C003475E0 /* CameraView.m */; };
 		F0B6A2651CD87F41003475E0 /* AvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B6A2641CD87F41003475E0 /* AvatarView.m */; };
 		F0C99A3E1CD793E80051C7D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A3D1CD793E80051C7D9 /* AppDelegate.m */; };
 		F0C99A411CD793E80051C7D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A401CD793E80051C7D9 /* main.m */; };
-		F0C99A441CD793E80051C7D9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A431CD793E80051C7D9 /* ViewController.m */; };
 		F0C99A461CD793E80051C7D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0C99A451CD793E80051C7D9 /* Assets.xcassets */; };
 		F0C99A491CD793E90051C7D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C99A471CD793E90051C7D9 /* Main.storyboard */; };
 		F0C99A541CD793E90051C7D9 /* AvatarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A531CD793E90051C7D9 /* AvatarTests.m */; };
 		F0C99A5F1CD793E90051C7D9 /* AvatarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A5E1CD793E90051C7D9 /* AvatarUITests.m */; };
+		F0FBA4F51CD9E2320003E743 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0FBA4F41CD9E2320003E743 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F001D9CE1CD8D2E100D71E33 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		F04761901CD89D4D00B7AA41 /* FaceGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceGenerator.cpp; sourceTree = "<group>"; };
 		F04761911CD89D4D00B7AA41 /* FaceGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FaceGenerator.hpp; sourceTree = "<group>"; };
-		F0B6A2601CD87E9C003475E0 /* CammeraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CammeraView.h; sourceTree = "<group>"; };
-		F0B6A2611CD87E9C003475E0 /* CammeraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CammeraView.m; sourceTree = "<group>"; };
+		F0B6A2601CD87E9C003475E0 /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraView.h; sourceTree = "<group>"; };
+		F0B6A2611CD87E9C003475E0 /* CameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraView.m; sourceTree = "<group>"; };
 		F0B6A2631CD87F41003475E0 /* AvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarView.h; sourceTree = "<group>"; };
 		F0B6A2641CD87F41003475E0 /* AvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarView.m; sourceTree = "<group>"; };
 		F0C99A391CD793E80051C7D9 /* Avatar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avatar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +50,6 @@
 		F0C99A3D1CD793E80051C7D9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F0C99A401CD793E80051C7D9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F0C99A421CD793E80051C7D9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F0C99A431CD793E80051C7D9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F0C99A451CD793E80051C7D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0C99A481CD793E90051C7D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0C99A4A1CD793E90051C7D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		F0C99A5A1CD793E90051C7D9 /* AvatarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AvatarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C99A5E1CD793E90051C7D9 /* AvatarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvatarUITests.m; sourceTree = "<group>"; };
 		F0C99A601CD793E90051C7D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0FBA4F41CD9E2320003E743 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0FBA4F51CD9E2320003E743 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +91,7 @@
 		F0C99A301CD793E80051C7D9 = {
 			isa = PBXGroup;
 			children = (
+				F0FBA4F41CD9E2320003E743 /* AVFoundation.framework */,
 				F0C99A3B1CD793E80051C7D9 /* Avatar */,
 				F0C99A521CD793E90051C7D9 /* AvatarTests */,
 				F0C99A5D1CD793E90051C7D9 /* AvatarUITests */,
@@ -113,13 +117,13 @@
 				F0C99A3C1CD793E80051C7D9 /* AppDelegate.h */,
 				F0C99A3D1CD793E80051C7D9 /* AppDelegate.m */,
 				F0C99A421CD793E80051C7D9 /* ViewController.h */,
-				F0C99A431CD793E80051C7D9 /* ViewController.m */,
+				F001D9CE1CD8D2E100D71E33 /* ViewController.mm */,
 				F0C99A451CD793E80051C7D9 /* Assets.xcassets */,
 				F0C99A471CD793E90051C7D9 /* Main.storyboard */,
 				F0C99A4A1CD793E90051C7D9 /* Info.plist */,
 				F0C99A3F1CD793E80051C7D9 /* Supporting Files */,
-				F0B6A2601CD87E9C003475E0 /* CammeraView.h */,
-				F0B6A2611CD87E9C003475E0 /* CammeraView.m */,
+				F0B6A2601CD87E9C003475E0 /* CameraView.h */,
+				F0B6A2611CD87E9C003475E0 /* CameraView.m */,
 				F0B6A2631CD87F41003475E0 /* AvatarView.h */,
 				F0B6A2641CD87F41003475E0 /* AvatarView.m */,
 			);
@@ -281,9 +285,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0C99A441CD793E80051C7D9 /* ViewController.m in Sources */,
-				F0B6A2621CD87E9C003475E0 /* CammeraView.m in Sources */,
+				F0B6A2621CD87E9C003475E0 /* CameraView.m in Sources */,
 				F04761921CD89D4D00B7AA41 /* FaceGenerator.cpp in Sources */,
+				F001D9CF1CD8D2E100D71E33 /* ViewController.mm in Sources */,
 				F0C99A411CD793E80051C7D9 /* main.m in Sources */,
 				F0C99A3E1CD793E80051C7D9 /* AppDelegate.m in Sources */,
 				F0B6A2651CD87F41003475E0 /* AvatarView.m in Sources */,

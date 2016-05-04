@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AvatarView : NSView
+@interface AvatarView : NSImageView
 
 @end

@@ -22,13 +22,6 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
-                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
-                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
-                                        <menuItem title="Services" id="NMo-om-nkz">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
-                                        </menuItem>
-                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
                                         <menuItem title="Hide Avatar" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
@@ -670,21 +663,62 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="681" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1013" height="466"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWz-Qo-Nel" userLabel="cameraView" customClass="CammeraView">
-                                <rect key="frame" x="20" y="20" width="314" height="280"/>
-                            </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="quO-s4-FS7" userLabel="avatarView" customClass="AvatarView">
-                                <rect key="frame" x="342" y="20" width="319" height="280"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1013" height="466"/>
                             </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWz-Qo-Nel" userLabel="cameraView" customClass="CameraView">
+                                <rect key="frame" x="0.0" y="286" width="320" height="180"/>
+                                <shadow key="shadow" blurRadius="1">
+                                    <size key="offset" width="1" height="-1"/>
+                                    <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </shadow>
+                            </customView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zKP-nj-mlk">
+                                <rect key="frame" x="14" y="13" width="292" height="32"/>
+                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KAD-W7-eX6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="start:" target="XfG-lQ-9wD" id="wis-2x-7Sv"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UbY-Ep-hCT">
+                                <rect key="frame" x="342" y="13" width="329" height="32"/>
+                                <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nyS-X7-Wlh">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="stop:" target="XfG-lQ-9wD" id="Ab0-KM-7fP"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tVw-ha-7IZ">
+                                <rect key="frame" x="707" y="13" width="292" height="32"/>
+                                <buttonCell key="cell" type="push" title="Photo" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DD3-4I-Sus">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="takePicture:" target="XfG-lQ-9wD" id="bc5-eW-adc"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="avatarView" destination="quO-s4-FS7" id="kBM-Yb-rVq"/>
+                        <outlet property="cameraView" destination="qWz-Qo-Nel" id="q2a-S5-n4m"/>
+                        <outlet property="photo" destination="m2S-Jp-Qdl" id="UG2-c7-RPK"/>
+                        <outlet property="start" destination="m2S-Jp-Qdl" id="014-pw-Act"/>
+                        <outlet property="stop" destination="UbY-Ep-hCT" id="qFF-bV-0yE"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175.5" y="607"/>
+            <point key="canvasLocation" x="175.5" y="694"/>
         </scene>
     </scenes>
 </document>

@@ -6,15 +6,14 @@
 //  Copyright © 2016 Projet 2A. All rights reserved.
 //
 
-#import "CammeraView.h"
+#import "CameraView.h"
 
-@implementation CammeraView
+@implementation CameraView
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
-    // Drawing code here.
-    [[NSColor whiteColor] setFill];
+    [[NSColor blackColor] setFill];
     [NSBezierPath fillRect:self.bounds];
 }
 

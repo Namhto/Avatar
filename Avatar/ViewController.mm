@@ -7,14 +7,94 @@
 //
 
 #import "ViewController.h"
-#import "FaceGenerator.hpp"
+#import <AVFoundation/AVFoundation.h>
+
+//#import "FaceGenerator.hpp"
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewWillAppear {
+    
     [super viewDidLoad];
+    [super viewWillAppear];
+    
+    [self.view setWantsLayer:true];
+    [self.view addSubview:self.cameraView];
+    
+    [self initCapturSeesion];
+    [self setUpPreviewLayer];
+}
 
-    // Do any additional setup after loading the view.
+- (void) viewDidLoad {
+    
+}
+
+- (void) initCapturSeesion {
+
+    session = [[AVCaptureSession alloc] init];
+    
+    if([session canSetSessionPreset:AVCaptureSessionPresetHigh]) {
+        [session setSessionPreset:AVCaptureSessionPresetHigh];
+    }
+    
+    AVCaptureDeviceInput *device_input = [[AVCaptureDeviceInput alloc] initWithDevice:
+                                           [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo][0] error:nil];
+    
+    if([session canAddInput:device_input])
+        [session addInput:device_input];
+}
+
+- (void) setUpPreviewLayer {
+    
+    self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
+    
+    [[self previewLayer] setVideoGravity:AVLayerVideoGravityResizeAspectFill];
+    [[self previewLayer] setFrame:self.cameraView.bounds];
+    [self.cameraView.layer addSublayer:self.previewLayer];
+}
+
+- (IBAction)start:(id)sender {
+    [session startRunning];
+}
+
+- (IBAction)stop:(id)sender {
+    [session stopRunning];
+}
+
+- (IBAction)takePicture:(id)sender {
+    
+    still_image = [[AVCaptureStillImageOutput alloc] init];
+    
+    NSDictionary *output_settings = [[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG, AVVideoCodecKey, nil];
+    [still_image setOutputSettings : output_settings];
+    
+    [session addOutput:still_image];
+    
+    video_connection = nil;
+    
+    for(AVCaptureConnection *connection in still_image.connections) {
+        for(AVCaptureInputPort *port in [connection inputPorts]) {
+            if([[port mediaType] isEqual: AVMediaTypeVideo]) {
+                video_connection = connection;
+                break;
+            }
+                
+        }
+        
+        if(video_connection)
+            break;
+    }
+    
+     [still_image captureStillImageAsynchronouslyFromConnection:video_connection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+        
+         if(imageDataSampleBuffer != nil) {
+             
+             NSData *data = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation: imageDataSampleBuffer];
+             NSImage *img = [[NSImage alloc] initWithData:data];
+             
+             self.avatarView.image = img;
+         }
+     }];
 }
 
 - (void)setRepresentedObject:(id)representedObject {
@@ -22,10 +102,6 @@
 
     // Update the view, if already loaded.
     
-    FaceGenerator fg;
-    
-    fg.generateFace("../../../dlib-18.18/examples/faces/2007_007763.jpg", "../../../dlib-18.18/examples/build/shape_predictor_68_face_landmark.dat");
-    
+   // FaceGenerator fg;
 }
-
 @end

@@ -10,12 +10,4 @@
 
 @implementation AvatarView
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
-    // Drawing code here.
-    [[NSColor whiteColor] setFill];
-    [NSBezierPath fillRect:self.bounds];
-}
-
 @end
