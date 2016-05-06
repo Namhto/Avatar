@@ -9,24 +9,26 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-//#import "FaceGenerator.hpp"
+#import "FaceGenerator.hpp"
 
 @implementation ViewController
 
+
 - (void)viewWillAppear {
     
+    self.photos = [[NSMutableArray alloc] init];
+
     [super viewDidLoad];
     [super viewWillAppear];
     
-    [self.view setWantsLayer:true];
-    [self.view addSubview:self.cameraView];
-    
+    [self.avatarView initView];
     [self initCapturSeesion];
     [self setUpPreviewLayer];
+    [session startRunning];
 }
 
 - (void) viewDidLoad {
-    
+
 }
 
 - (void) initCapturSeesion {
@@ -51,17 +53,6 @@
     [[self previewLayer] setVideoGravity:AVLayerVideoGravityResizeAspectFill];
     [[self previewLayer] setFrame:self.cameraView.bounds];
     [self.cameraView.layer addSublayer:self.previewLayer];
-}
-
-- (IBAction)start:(id)sender {
-    [session startRunning];
-}
-
-- (IBAction)stop:(id)sender {
-    [session stopRunning];
-}
-
-- (IBAction)takePicture:(id)sender {
     
     still_image = [[AVCaptureStillImageOutput alloc] init];
     
@@ -69,7 +60,18 @@
     [still_image setOutputSettings : output_settings];
     
     [session addOutput:still_image];
+}
+
+- (IBAction)start:(id)sender {
     
+}
+
+- (IBAction)stop:(id)sender {
+    [session stopRunning];
+}
+
+- (void)takePicture {
+
     video_connection = nil;
     
     for(AVCaptureConnection *connection in still_image.connections) {
@@ -78,30 +80,37 @@
                 video_connection = connection;
                 break;
             }
-                
+            
         }
         
         if(video_connection)
             break;
     }
     
-     [still_image captureStillImageAsynchronouslyFromConnection:video_connection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
+    [still_image captureStillImageAsynchronouslyFromConnection:video_connection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         
          if(imageDataSampleBuffer != nil) {
              
              NSData *data = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation: imageDataSampleBuffer];
              NSImage *img = [[NSImage alloc] initWithData:data];
              
-             self.avatarView.image = img;
+             [self.photos addObject: img];
          }
-     }];
+    }];
 }
+
+- (IBAction) takePicture:(id)sender {
+    
+    [self takePicture];    
+}
+
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
 
     // Update the view, if already loaded.
     
-   // FaceGenerator fg;
+    // FaceGenerator fg;
 }
+
 @end

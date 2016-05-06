@@ -8,6 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AvatarView : NSImageView
+@interface AvatarView : NSView
+
+- (void) initView;
+- (void) drawImage : (NSImage *) img;
 
 @end

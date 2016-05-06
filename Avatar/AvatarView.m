@@ -10,4 +10,22 @@
 
 @implementation AvatarView
 
+NSImageView *view;
+
+- (void) drawRect:(NSRect)dirtyRect {
+}
+
+- (void) initView {
+    
+    view = [[NSImageView alloc] initWithFrame:self.bounds];
+    [self addSubview:view];
+
+}
+
+- (void) drawImage : (NSImage *) img {
+    
+    if(img != nil)
+        [view setImage : img];
+}
+
 @end

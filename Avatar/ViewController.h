@@ -19,10 +19,12 @@
 
 @property (nonatomic, retain) AVCaptureVideoPreviewLayer *previewLayer;
 @property (nonatomic, retain) IBOutlet CameraView *cameraView;
-@property (nonatomic, retain) IBOutlet NSImageView *avatarView;
-@property (nonatomic, retain) IBOutlet NSView *start;
-@property (nonatomic, retain) IBOutlet NSView *stop;
-@property (nonatomic, retain) IBOutlet NSView *photo;
+@property (nonatomic, retain) IBOutlet AvatarView *avatarView;
+@property (weak) IBOutlet NSButton *start;
+@property (weak) IBOutlet NSButton *stop;
+@property (weak) IBOutlet NSButton *photo;
+@property (strong) NSMutableArray<NSImage*> *photos;
+
 
 - (void) initCapturSeesion;
 - (void) setUpPreviewLayer;
