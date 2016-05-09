@@ -9,14 +9,12 @@
 #import "ViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-#import "FaceGenerator.hpp"
-
 @implementation ViewController
 
 
 - (void)viewWillAppear {
     
-    self.photos = [[NSMutableArray alloc] init];
+    self.photos = [[NSImage alloc] init];
 
     [super viewDidLoad];
     [super viewWillAppear];
@@ -94,11 +92,11 @@
              NSData *data = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation: imageDataSampleBuffer];
              NSImage *img = [[NSImage alloc] initWithData:data];
              
-             [self.photos addObject: img];
+             self.photos = img;
          }
     }];
     
-    [self.avatarView drawImage:[self.photos lastObject]];
+    [self.avatarView drawImage: self.photos];
 }
 
 - (IBAction) takePicture:(id)sender {

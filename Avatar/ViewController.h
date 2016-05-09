@@ -23,7 +23,7 @@
 @property (weak) IBOutlet NSButton *start;
 @property (weak) IBOutlet NSButton *stop;
 @property (weak) IBOutlet NSButton *photo;
-@property (strong) NSMutableArray<NSImage*> *photos;
+@property (strong) NSImage *photos;
 
 
 - (void) initCapturSeesion;

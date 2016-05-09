@@ -5,7 +5,7 @@
 //  Created by Philippe Studer on 04/05/2016.
 //  Copyright © 2016 Philippe Studer. All rights reserved.
 //
-
+/*
 #import "FaceDetection.h"
 #include <vector>
 #include "dlib/image_processing/full_object_detection.h"
@@ -134,4 +134,4 @@ using namespace dlib;
     [path lineToPoint:NSMakePoint(point.x() / 2, (offset - point.y()) / 2)];
 }
 
-@end
+@end*/
