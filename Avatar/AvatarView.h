@@ -10,7 +10,7 @@
 
 @interface AvatarView : NSView
 
-@property NSImage *image;
+@property (strong) NSImage *image;
 @property NSBezierPath *facesPath;
 
 @end

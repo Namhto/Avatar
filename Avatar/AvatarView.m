@@ -13,6 +13,9 @@
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     
+    [[NSColor whiteColor] setFill];
+    [NSBezierPath fillRect:self.bounds];
+    
     // Drawing code here.
     if (self.image != nil) {
         NSImageRep *rep = [[self.image representations] objectAtIndex:0];
@@ -21,7 +24,7 @@
     }
     
     if (self.facesPath != nil) {
-        [[NSColor redColor] setStroke];
+        [[NSColor blackColor] setStroke];
         [self.facesPath stroke];
     }
 }

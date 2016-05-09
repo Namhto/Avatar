@@ -15,11 +15,10 @@
 - (void)viewWillAppear {
     
     self.photos = [[NSImage alloc] init];
-    self.data = [[NSData alloc] init];
     self.faceDetection = [[FaceDetection alloc] init];
     
-    NSImage *image = [[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/file.JPG"];
-    self.avatarView.image = image;
+    //NSImage *image = [[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/file.JPG"];
+    //self.avatarView.image = image;
 
     [super viewDidLoad];
     [super viewWillAppear];
@@ -32,6 +31,7 @@
 
     // Face detection
     NSBezierPath *facesPath = [self.faceDetection processImage:@"/Users/projet2a/Desktop/file.JPG"];
+    self.avatarView.image = [[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/file.JPG"];
     
     // Update view
     
@@ -63,7 +63,7 @@
 
 - (IBAction)start:(id)sender {
     [session startRunning];
-    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 2 target: self
+    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 0.05 target: self
                                                       selector: @selector(photo:) userInfo: nil repeats: YES];
 }
 
@@ -93,15 +93,15 @@
          if(imageDataSampleBuffer != nil) {
              
              NSData *data = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation: imageDataSampleBuffer];
-             NSImage *img = [[NSImage alloc] initWithData:data];
              
-             self.photos = img;
-             self.data = data;
+             self.photos = [[NSImage alloc] initWithData:data];
+             self.data = [[NSData alloc] initWithData:data];
          }
     }];
     
     [self.cameraView drawImage: self.photos];
     [self.data writeToFile: @"/Users/projet2a/Desktop/file.JPG" atomically: NO];
+    
     if(self.photos != nil)
         [self startDetection];
 }

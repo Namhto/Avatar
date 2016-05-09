@@ -43,7 +43,7 @@ using namespace dlib;
     array2d<rgb_pixel> img;
     load_image(img, [path UTF8String]);
     // Make the image larger so we can detect small faces.
-    pyramid_up(img);
+    //pyramid_up(img);
     
     // Now tell the face detector to give us a list of bounding boxes
     // around all the faces in the image.
@@ -126,12 +126,12 @@ using namespace dlib;
 
 - (void)path:(NSBezierPath *)path moveToPoint:(const point&)point offset:(long)offset
 {
-    [path moveToPoint:NSMakePoint(point.x() / 2, (offset - point.y()) / 2)];
+    [path moveToPoint:NSMakePoint(point.x(), (offset - point.y()))];
 }
 
 - (void)path:(NSBezierPath *)path lineToPoint:(const point&)point offset:(long)offset
 {
-    [path lineToPoint:NSMakePoint(point.x() / 2, (offset - point.y()) / 2)];
+    [path lineToPoint:NSMakePoint(point.x(), (offset - point.y()))];
 }
 
 @end
