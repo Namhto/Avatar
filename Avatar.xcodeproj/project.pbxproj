@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		F001D9CF1CD8D2E100D71E33 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F001D9CE1CD8D2E100D71E33 /* ViewController.mm */; };
 		F04761921CD89D4D00B7AA41 /* FaceGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F04761901CD89D4D00B7AA41 /* FaceGenerator.cpp */; };
+		F067D2811CE072F30068DBDF /* FaceDetection.mm in Sources */ = {isa = PBXBuildFile; fileRef = F067D2801CE072F30068DBDF /* FaceDetection.mm */; };
+		F067D2841CE073940068DBDF /* dlib in Resources */ = {isa = PBXBuildFile; fileRef = F067D2831CE073940068DBDF /* dlib */; };
 		F0B6A2621CD87E9C003475E0 /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B6A2611CD87E9C003475E0 /* CameraView.m */; };
 		F0B6A2651CD87F41003475E0 /* AvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B6A2641CD87F41003475E0 /* AvatarView.m */; };
 		F0C99A3E1CD793E80051C7D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A3D1CD793E80051C7D9 /* AppDelegate.m */; };
@@ -41,6 +43,9 @@
 		F001D9CE1CD8D2E100D71E33 /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		F04761901CD89D4D00B7AA41 /* FaceGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceGenerator.cpp; sourceTree = "<group>"; };
 		F04761911CD89D4D00B7AA41 /* FaceGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FaceGenerator.hpp; sourceTree = "<group>"; };
+		F067D2801CE072F30068DBDF /* FaceDetection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetection.mm; sourceTree = "<group>"; };
+		F067D2821CE073190068DBDF /* FaceDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDetection.h; sourceTree = "<group>"; };
+		F067D2831CE073940068DBDF /* dlib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = dlib; path = ../../dlib; sourceTree = "<group>"; };
 		F0B6A2601CD87E9C003475E0 /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraView.h; sourceTree = "<group>"; };
 		F0B6A2611CD87E9C003475E0 /* CameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraView.m; sourceTree = "<group>"; };
 		F0B6A2631CD87F41003475E0 /* AvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarView.h; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 		F0C99A3B1CD793E80051C7D9 /* Avatar */ = {
 			isa = PBXGroup;
 			children = (
+				F067D2831CE073940068DBDF /* dlib */,
 				F04761901CD89D4D00B7AA41 /* FaceGenerator.cpp */,
 				F04761911CD89D4D00B7AA41 /* FaceGenerator.hpp */,
 				F0C99A3C1CD793E80051C7D9 /* AppDelegate.h */,
@@ -126,6 +132,8 @@
 				F0B6A2611CD87E9C003475E0 /* CameraView.m */,
 				F0B6A2631CD87F41003475E0 /* AvatarView.h */,
 				F0B6A2641CD87F41003475E0 /* AvatarView.m */,
+				F067D2801CE072F30068DBDF /* FaceDetection.mm */,
+				F067D2821CE073190068DBDF /* FaceDetection.h */,
 			);
 			path = Avatar;
 			sourceTree = "<group>";
@@ -261,6 +269,7 @@
 			files = (
 				F0C99A461CD793E80051C7D9 /* Assets.xcassets in Resources */,
 				F0C99A491CD793E90051C7D9 /* Main.storyboard in Resources */,
+				F067D2841CE073940068DBDF /* dlib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0B6A2621CD87E9C003475E0 /* CameraView.m in Sources */,
+				F067D2811CE072F30068DBDF /* FaceDetection.mm in Sources */,
 				F04761921CD89D4D00B7AA41 /* FaceGenerator.cpp in Sources */,
 				F001D9CF1CD8D2E100D71E33 /* ViewController.mm in Sources */,
 				F0C99A411CD793E80051C7D9 /* main.m in Sources */,
