@@ -32,7 +32,7 @@ using namespace dlib;
         // landmark positions given an image and face bounding box.  Here we are just
         // loading the model from the shape_predictor_68_face_landmarks.dat file you gave
         // as a command line argument.
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"shape_predictor_68_face_landmarks" ofType:@"dat"];
+        NSString *path = @"/Users/projet2a/Desktop/Avatar_2016/Avatar/shape_predictor_68_face_landmarks.dat";
         deserialize([path UTF8String]) >> sp;
     }
     return self;
