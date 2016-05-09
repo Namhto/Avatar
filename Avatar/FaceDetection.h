@@ -5,7 +5,7 @@
 //  Created by Philippe Studer on 04/05/2016.
 //  Copyright © 2016 Philippe Studer. All rights reserved.
 //
-/*
+
 #import <Cocoa/Cocoa.h>
 
 @interface FaceDetection : NSObject
@@ -14,4 +14,4 @@
 
 - (NSBezierPath *)processImage:(NSString *)path;
 
-@end*/
+@end

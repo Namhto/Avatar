@@ -10,6 +10,7 @@
 #import "CameraView.h"
 #import "AvatarView.h"
 #import <AVFoundation/AVFoundation.h>
+#import "FaceDetection.h"
 
 @interface ViewController : NSViewController {
     AVCaptureSession *session;
@@ -22,7 +23,12 @@
 @property (weak) IBOutlet NSButton *start;
 @property (weak) IBOutlet NSButton *stop;
 @property (strong) NSImage *photos;
+@property (strong) NSData *data;
+@property FaceDetection *faceDetection;
 
+
+
+- (void)startDetection;
 
 - (void) initCapturSeesion;
 - (void) photo:(NSTimer*) t;

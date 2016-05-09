@@ -15,12 +15,28 @@
 - (void)viewWillAppear {
     
     self.photos = [[NSImage alloc] init];
+    self.data = [[NSData alloc] init];
+    self.faceDetection = [[FaceDetection alloc] init];
+    
+    NSImage *image = [[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/file.jpeg"];
+    self.avatarView.image = image;
 
     [super viewDidLoad];
     [super viewWillAppear];
     
     [self.cameraView initView];
     [self initCapturSeesion];
+}
+
+- (IBAction)startDetection{
+
+    // Face detection
+    NSBezierPath *facesPath = [self.faceDetection processImage:@"/Users/projet2a/Desktop/file.jpeg"];
+    
+    // Update view
+    
+    self.avatarView.facesPath = facesPath;
+    self.avatarView.needsDisplay = YES;
 }
 
 - (void) initCapturSeesion {
@@ -49,10 +65,10 @@
     [session startRunning];
     NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 0.1 target: self
                                                       selector: @selector(photo:) userInfo: nil repeats: YES];
+    [self startDetection];
 }
 
 - (IBAction)stop:(id)sender {
-    [self.cameraView drawImage:nil];
     [session stopRunning];
 }
 
@@ -81,10 +97,12 @@
              NSImage *img = [[NSImage alloc] initWithData:data];
              
              self.photos = img;
+             self.data = data;
          }
     }];
     
     [self.cameraView drawImage: self.photos];
+    [self.data writeToFile: @"/Users/projet2a/Desktop/file.png" atomically: NO];
 }
 
 - (void)setRepresentedObject:(id)representedObject {

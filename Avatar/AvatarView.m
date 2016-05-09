@@ -10,9 +10,20 @@
 
 @implementation AvatarView
 
-- (void) drawRect:(NSRect)dirtyRect {
-    [[NSColor whiteColor] setFill];
-    [NSBezierPath fillRect:self.bounds];
+- (void)drawRect:(NSRect)dirtyRect {
+    [super drawRect:dirtyRect];
+    
+    // Drawing code here.
+    if (self.image != nil) {
+        NSImageRep *rep = [[self.image representations] objectAtIndex:0];
+        NSSize imageSize = NSMakeSize(rep.pixelsWide, rep.pixelsHigh);
+        [self.image drawInRect:NSMakeRect(0.0, 0.0, imageSize.width, imageSize.height)];
+    }
+    
+    if (self.facesPath != nil) {
+        [[NSColor redColor] setStroke];
+        [self.facesPath stroke];
+    }
 }
 
 @end
