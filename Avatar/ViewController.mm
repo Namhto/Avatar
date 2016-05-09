@@ -24,7 +24,6 @@
     [self.avatarView initView];
     [self initCapturSeesion];
     [self setUpPreviewLayer];
-    [session startRunning];
 }
 
 - (void) viewDidLoad {
@@ -63,14 +62,15 @@
 }
 
 - (IBAction)start:(id)sender {
-    
+    [session startRunning];
 }
 
 - (IBAction)stop:(id)sender {
     [session stopRunning];
+    [self.avatarView drawImage:nil];
 }
 
-- (void)takePicture {
+- (void)photo : (NSTimer*) t {
 
     video_connection = nil;
     
@@ -97,11 +97,14 @@
              [self.photos addObject: img];
          }
     }];
+    
+    [self.avatarView drawImage:[self.photos lastObject]];
 }
 
 - (IBAction) takePicture:(id)sender {
     
-    [self takePicture];    
+    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 0.1 target: self //60fps
+                                                      selector: @selector(photo:) userInfo: nil repeats: YES];
 }
 
 

@@ -31,6 +31,7 @@
 - (IBAction)start:(id)sender;
 - (IBAction)stop:(id)sender;
 - (IBAction)takePicture:(id)sender;
+- (void) photo:(NSTimer*) t;
 
 @end
 

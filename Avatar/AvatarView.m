@@ -13,19 +13,19 @@
 NSImageView *view;
 
 - (void) drawRect:(NSRect)dirtyRect {
+    [[NSColor whiteColor] setFill];
+    [NSBezierPath fillRect:self.bounds];
 }
 
 - (void) initView {
     
     view = [[NSImageView alloc] initWithFrame:self.bounds];
     [self addSubview:view];
-
 }
 
 - (void) drawImage : (NSImage *) img {
-    
-    if(img != nil)
-        [view setImage : img];
+
+    [view setImage : img];
 }
 
 @end
