@@ -10,11 +10,22 @@
 
 @implementation CameraView
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-    
+NSImageView *view;
+
+- (void) drawRect:(NSRect)dirtyRect {
     [[NSColor blackColor] setFill];
     [NSBezierPath fillRect:self.bounds];
+}
+
+- (void) initView {
+    
+    view = [[NSImageView alloc] initWithFrame:self.bounds];
+    [self addSubview:view];
+}
+
+- (void) drawImage : (NSImage *) img {
+    
+    [view setImage : img];
 }
 
 @end

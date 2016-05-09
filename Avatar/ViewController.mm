@@ -19,13 +19,8 @@
     [super viewDidLoad];
     [super viewWillAppear];
     
-    [self.avatarView initView];
+    [self.cameraView initView];
     [self initCapturSeesion];
-    [self setUpPreviewLayer];
-}
-
-- (void) viewDidLoad {
-
 }
 
 - (void) initCapturSeesion {
@@ -41,15 +36,6 @@
     
     if([session canAddInput:device_input])
         [session addInput:device_input];
-}
-
-- (void) setUpPreviewLayer {
-    
-    self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
-    
-    [[self previewLayer] setVideoGravity:AVLayerVideoGravityResizeAspectFill];
-    [[self previewLayer] setFrame:self.cameraView.bounds];
-    [self.cameraView.layer addSublayer:self.previewLayer];
     
     still_image = [[AVCaptureStillImageOutput alloc] init];
     
@@ -61,11 +47,13 @@
 
 - (IBAction)start:(id)sender {
     [session startRunning];
+    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 0.1 target: self
+                                                      selector: @selector(photo:) userInfo: nil repeats: YES];
 }
 
 - (IBAction)stop:(id)sender {
+    [self.cameraView drawImage:nil];
     [session stopRunning];
-    [self.avatarView drawImage:nil];
 }
 
 - (void)photo : (NSTimer*) t {
@@ -96,22 +84,13 @@
          }
     }];
     
-    [self.avatarView drawImage: self.photos];
+    [self.cameraView drawImage: self.photos];
 }
-
-- (IBAction) takePicture:(id)sender {
-    
-    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 0.1 target: self //60fps
-                                                      selector: @selector(photo:) userInfo: nil repeats: YES];
-}
-
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
 
     // Update the view, if already loaded.
-    
-    // FaceGenerator fg;
 }
 
 @end

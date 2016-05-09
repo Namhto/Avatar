@@ -17,21 +17,18 @@
     AVCaptureStillImageOutput *still_image;
 }
 
-@property (nonatomic, retain) AVCaptureVideoPreviewLayer *previewLayer;
 @property (nonatomic, retain) IBOutlet CameraView *cameraView;
 @property (nonatomic, retain) IBOutlet AvatarView *avatarView;
 @property (weak) IBOutlet NSButton *start;
 @property (weak) IBOutlet NSButton *stop;
-@property (weak) IBOutlet NSButton *photo;
 @property (strong) NSImage *photos;
 
 
 - (void) initCapturSeesion;
-- (void) setUpPreviewLayer;
+- (void) photo:(NSTimer*) t;
+
 - (IBAction)start:(id)sender;
 - (IBAction)stop:(id)sender;
-- (IBAction)takePicture:(id)sender;
-- (void) photo:(NSTimer*) t;
 
 @end
 

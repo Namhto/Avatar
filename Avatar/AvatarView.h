@@ -10,7 +10,4 @@
 
 @interface AvatarView : NSView
 
-- (void) initView;
-- (void) drawImage : (NSImage *) img;
-
 @end

@@ -10,4 +10,7 @@
 
 @interface CameraView : NSView
 
+- (void) initView;
+- (void) drawImage : (NSImage *) img;
+
 @end

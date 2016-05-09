@@ -669,34 +669,14 @@
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="quO-s4-FS7" userLabel="avatarView" customClass="AvatarView">
                                 <rect key="frame" x="0.0" y="60" width="960" height="540"/>
                             </customView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tVw-ha-7IZ">
-                                <rect key="frame" x="684" y="13" width="262" height="32"/>
-                                <buttonCell key="cell" type="push" title="Photo" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DD3-4I-Sus">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="takePicture:" target="XfG-lQ-9wD" id="bc5-eW-adc"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UbY-Ep-hCT">
-                                <rect key="frame" x="347" y="13" width="260" height="32"/>
+                                <rect key="frame" x="524" y="13" width="422" height="32"/>
                                 <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nyS-X7-Wlh">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
                                     <action selector="stop:" target="XfG-lQ-9wD" id="Ab0-KM-7fP"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zKP-nj-mlk">
-                                <rect key="frame" x="14" y="13" width="262" height="32"/>
-                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KAD-W7-eX6">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="start:" target="XfG-lQ-9wD" id="wis-2x-7Sv"/>
                                 </connections>
                             </button>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qWz-Qo-Nel" userLabel="cameraView" customClass="CameraView">
@@ -706,12 +686,21 @@
                                     <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </shadow>
                             </customView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zKP-nj-mlk">
+                                <rect key="frame" x="14" y="13" width="422" height="32"/>
+                                <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KAD-W7-eX6">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="start:" target="XfG-lQ-9wD" id="wis-2x-7Sv"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="avatarView" destination="quO-s4-FS7" id="kBM-Yb-rVq"/>
                         <outlet property="cameraView" destination="qWz-Qo-Nel" id="q2a-S5-n4m"/>
-                        <outlet property="photo" destination="tVw-ha-7IZ" id="tzj-RF-Jh9"/>
                         <outlet property="start" destination="zKP-nj-mlk" id="byI-N0-MRF"/>
                         <outlet property="stop" destination="UbY-Ep-hCT" id="DWv-C1-YzL"/>
                     </connections>
