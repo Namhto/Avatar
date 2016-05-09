@@ -13,9 +13,10 @@
 #include "dlib/image_processing.h"
 #include "dlib/serialize.h"
 #include "dlib/image_io.h"
-
+#include "ImageConverter.h"
 
 using namespace dlib;
+
 
 @implementation FaceDetection {
     frontal_face_detector detector;
@@ -38,10 +39,11 @@ using namespace dlib;
     return self;
 }
 
-- (NSBezierPath *)processImage:(NSString *)path
+- (NSBezierPath *)processImage:(NSImage *)image
 {
     array2d<rgb_pixel> img;
-    load_image(img, [path UTF8String]);
+    
+    [ImageConverter convert:image : img];
     // Make the image larger so we can detect small faces.
     //pyramid_up(img);
     

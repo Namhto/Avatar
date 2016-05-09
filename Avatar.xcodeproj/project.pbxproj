@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F001D9CF1CD8D2E100D71E33 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F001D9CE1CD8D2E100D71E33 /* ViewController.m */; };
+		F00F3EF61CE0C3F400E308FA /* ImageConverter.mm in Sources */ = {isa = PBXBuildFile; fileRef = F00F3EF51CE0C3F400E308FA /* ImageConverter.mm */; };
 		F067D2811CE072F30068DBDF /* FaceDetection.mm in Sources */ = {isa = PBXBuildFile; fileRef = F067D2801CE072F30068DBDF /* FaceDetection.mm */; };
 		F0B6A2621CD87E9C003475E0 /* CameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B6A2611CD87E9C003475E0 /* CameraView.m */; };
 		F0B6A2651CD87F41003475E0 /* AvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B6A2641CD87F41003475E0 /* AvatarView.m */; };
@@ -143,6 +144,8 @@
 
 /* Begin PBXFileReference section */
 		F001D9CE1CD8D2E100D71E33 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F00F3EF41CE0C3F400E308FA /* ImageConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageConverter.h; sourceTree = "<group>"; };
+		F00F3EF51CE0C3F400E308FA /* ImageConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageConverter.mm; sourceTree = "<group>"; };
 		F067D2801CE072F30068DBDF /* FaceDetection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetection.mm; sourceTree = "<group>"; };
 		F067D2821CE073190068DBDF /* FaceDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDetection.h; sourceTree = "<group>"; };
 		F0693ADE1CE08CA800F96094 /* shape_predictor_68_face_landmarks.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = shape_predictor_68_face_landmarks.dat; sourceTree = "<group>"; };
@@ -989,6 +992,8 @@
 				F067D2801CE072F30068DBDF /* FaceDetection.mm */,
 				F067D2821CE073190068DBDF /* FaceDetection.h */,
 				F0693ADE1CE08CA800F96094 /* shape_predictor_68_face_landmarks.dat */,
+				F00F3EF41CE0C3F400E308FA /* ImageConverter.h */,
+				F00F3EF51CE0C3F400E308FA /* ImageConverter.mm */,
 			);
 			path = Avatar;
 			sourceTree = "<group>";
@@ -2415,6 +2420,7 @@
 				F0F416C01CE08F27004D1F6A /* threads_kernel_shared.cpp in Sources */,
 				F0F416B41CE08F27004D1F6A /* misc_api_kernel_1.cpp in Sources */,
 				F0F416AB1CE08F27004D1F6A /* inftrees.c in Sources */,
+				F00F3EF61CE0C3F400E308FA /* ImageConverter.mm in Sources */,
 				F0F416781CE08F27004D1F6A /* jdhuff.cpp in Sources */,
 				F0C99A411CD793E80051C7D9 /* main.m in Sources */,
 				F0F416BF1CE08F27004D1F6A /* threads_kernel_2.cpp in Sources */,

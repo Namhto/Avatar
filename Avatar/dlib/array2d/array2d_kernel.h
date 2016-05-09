@@ -17,7 +17,6 @@ namespace dlib
         >
     class array2d : public enumerable<T>
     {
-
         /*!
             INITIAL VALUE
                 - nc_ == 0 
@@ -53,7 +52,6 @@ namespace dlib
 
         class row_helper;
     public:
-
         // These typedefs are here for backwards compatibility with older versions of dlib.
         typedef array2d kernel_1a;
         typedef array2d kernel_1a_c;
