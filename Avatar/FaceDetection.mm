@@ -33,17 +33,18 @@ using namespace dlib;
         // landmark positions given an image and face bounding box.  Here we are just
         // loading the model from the shape_predictor_68_face_landmarks.dat file you gave
         // as a command line argument.
-        NSString *path = @"/Users/projet2a/Desktop/Avatar_2016/Avatar/shape_predictor_68_face_landmarks.dat";
+        NSString *path = @"/Users/projet2a/Desktop/Projet 2016/Avatar/shape_predictor_68_face_landmarks.dat";
         deserialize([path UTF8String]) >> sp;
     }
     return self;
 }
 
-- (NSBezierPath *)processImage:(NSImage *)image
+- (NSBezierPath *)processImage//:(NSImage *)image
 {
     array2d<rgb_pixel> img;
     
-    [ImageConverter convert:image : img];
+    //[ImageConverter convert:image : img];
+    load_image(img, "/Users/projet2a/Desktop/Projet 2016/Avatar/file.JPG");
     // Make the image larger so we can detect small faces.
     //pyramid_up(img);
     

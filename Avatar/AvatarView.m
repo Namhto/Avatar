@@ -17,11 +17,11 @@
     [NSBezierPath fillRect:self.bounds];
     
     // Drawing code here.
-    /*if (self.image != nil) {
-        NSImageRep *rep = [[self.image representations] objectAtIndex:0];
-        NSSize imageSize = NSMakeSize(rep.pixelsWide, rep.pixelsHigh);
-        [self.image drawInRect:NSMakeRect(0.0, 0.0, imageSize.width, imageSize.height)];
-    }*/
+    if (self.image != nil) {
+        //NSImageRep *rep = [[self.image representations] objectAtIndex:0];
+        //NSSize imageSize = NSMakeSize(rep.pixelsWide, rep.pixelsHigh);
+        [self.image drawInRect:NSMakeRect(0.0, 0.0, self.bounds.size.width, self.bounds.size.height)];
+    }
     
     if (self.facesPath != nil) {
         [[NSColor blackColor] setStroke];

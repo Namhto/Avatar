@@ -148,7 +148,7 @@
 		F00F3EF51CE0C3F400E308FA /* ImageConverter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageConverter.mm; sourceTree = "<group>"; };
 		F067D2801CE072F30068DBDF /* FaceDetection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetection.mm; sourceTree = "<group>"; };
 		F067D2821CE073190068DBDF /* FaceDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDetection.h; sourceTree = "<group>"; };
-		F0693ADE1CE08CA800F96094 /* shape_predictor_68_face_landmarks.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = shape_predictor_68_face_landmarks.dat; sourceTree = "<group>"; };
+		F0A3C53D1CE1DC2200731433 /* shape_predictor_68_face_landmarks.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = shape_predictor_68_face_landmarks.dat; sourceTree = "<group>"; };
 		F0B6A2601CD87E9C003475E0 /* CameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraView.h; sourceTree = "<group>"; };
 		F0B6A2611CD87E9C003475E0 /* CameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraView.m; sourceTree = "<group>"; };
 		F0B6A2631CD87F41003475E0 /* AvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarView.h; sourceTree = "<group>"; };
@@ -991,9 +991,9 @@
 				F0B6A2641CD87F41003475E0 /* AvatarView.m */,
 				F067D2801CE072F30068DBDF /* FaceDetection.mm */,
 				F067D2821CE073190068DBDF /* FaceDetection.h */,
-				F0693ADE1CE08CA800F96094 /* shape_predictor_68_face_landmarks.dat */,
 				F00F3EF41CE0C3F400E308FA /* ImageConverter.h */,
 				F00F3EF51CE0C3F400E308FA /* ImageConverter.mm */,
+				F0A3C53D1CE1DC2200731433 /* shape_predictor_68_face_landmarks.dat */,
 			);
 			path = Avatar;
 			sourceTree = "<group>";

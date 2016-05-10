@@ -12,6 +12,6 @@
 
 - (instancetype)init;
 
-- (NSBezierPath *)processImage:(NSString *)path;
+- (NSBezierPath *)processImage;//:(NSString *)path;
 
 @end

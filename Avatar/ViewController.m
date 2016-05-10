@@ -30,8 +30,8 @@
 - (void)startDetection{
 
     // Face detection
-    NSBezierPath *facesPath = [self.faceDetection processImage:@"/Users/projet2a/Desktop/file.JPG"];
-    self.avatarView.image = [[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/file.JPG"];
+    NSBezierPath *facesPath = [self.faceDetection processImage];
+    self.avatarView.image = [[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/Projet 2016/Avatar/file.JPG"];
     
     // Update view
     
@@ -63,7 +63,7 @@
 
 - (IBAction)start:(id)sender {
     [session startRunning];
-    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 0.05 target: self
+    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 0.1 target: self
                                                       selector: @selector(photo:) userInfo: nil repeats: YES];
 }
 
@@ -100,7 +100,7 @@
     }];
     
     [self.cameraView drawImage: self.photos];
-    [self.data writeToFile: @"/Users/projet2a/Desktop/file.JPG" atomically: NO];
+    [self.data writeToFile: @"/Users/projet2a/Desktop/Projet 2016/Avatar/file.JPG" atomically: NO];
     
     if(self.photos != nil)
         [self startDetection];
