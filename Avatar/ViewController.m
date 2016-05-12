@@ -35,8 +35,15 @@
 - (void)startDetection{
 
     // Face detection
-    NSBezierPath *facesPath = [self.faceDetection processImage : @"/Users/projet2a/Desktop/Avatar/Avatar/ressources/file.JPG"];
-    self.avatarView.image = [[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/Avatar/Avatar/ressources/file.JPG"];
+    NSString *path;
+    
+    if([[NSFileManager defaultManager] fileExistsAtPath:@"/Users/projet2a/Desktop/Avatar/Avatar/ressources/file.JPG"])
+        path = @"/Users/projet2a/Desktop/Avatar/Avatar/ressources/file.JPG";
+    else
+        path = @"/Users/projet2a/Desktop/Avatar/Avatar/ressources/init.JPG";
+        
+    NSBezierPath *facesPath = [self.faceDetection processImage : path];
+    self.avatarView.image = [[NSImage alloc] initWithContentsOfFile : path];
     
     // Update view
     
