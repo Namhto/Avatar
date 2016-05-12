@@ -24,7 +24,8 @@
     
     if(self.showAvatar)
         if (self.facesPath != nil) {
-            [[NSColor redColor] setStroke];
+           // [[NSColor redColor] setStroke];
+            [self.avatarColor setStroke];
             [self.facesPath stroke];
         }
 }

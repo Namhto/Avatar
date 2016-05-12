@@ -37,5 +37,11 @@
 - (IBAction)toggleAvatar:(id)sender;
 - (IBAction)toggleCamera:(id)sender;
 
+-(IBAction)Blanc:(id)sender;
+-(IBAction)Rouge:(id)sender;
+-(IBAction)Vert:(id)sender;
+
+
+
 @end
 
