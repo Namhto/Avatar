@@ -17,7 +17,6 @@
 		F0BB630C1CE4714300409A9C /* 2016 in Resources */ = {isa = PBXBuildFile; fileRef = F0BB63021CE4714300409A9C /* 2016 */; };
 		F0BB630D1CE4714300409A9C /* 24-51-09-12512016.png in Resources */ = {isa = PBXBuildFile; fileRef = F0BB63031CE4714300409A9C /* 24-51-09-12512016.png */; };
 		F0BB630E1CE4714300409A9C /* 35-17-09-12172016.png in Resources */ = {isa = PBXBuildFile; fileRef = F0BB63041CE4714300409A9C /* 35-17-09-12172016.png */; };
-		F0BB630F1CE4714300409A9C /* file.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F0BB63051CE4714300409A9C /* file.JPG */; };
 		F0BB63101CE4714300409A9C /* init.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F0BB63061CE4714300409A9C /* init.JPG */; };
 		F0BB63111CE4714300409A9C /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = F0BB63071CE4714300409A9C /* photo.png */; };
 		F0C99A3E1CD793E80051C7D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A3D1CD793E80051C7D9 /* AppDelegate.m */; };
@@ -164,7 +163,6 @@
 		F0BB63021CE4714300409A9C /* 2016 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 2016; sourceTree = "<group>"; };
 		F0BB63031CE4714300409A9C /* 24-51-09-12512016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "24-51-09-12512016.png"; sourceTree = "<group>"; };
 		F0BB63041CE4714300409A9C /* 35-17-09-12172016.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "35-17-09-12172016.png"; sourceTree = "<group>"; };
-		F0BB63051CE4714300409A9C /* file.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = file.JPG; sourceTree = "<group>"; };
 		F0BB63061CE4714300409A9C /* init.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = init.JPG; sourceTree = "<group>"; };
 		F0BB63071CE4714300409A9C /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		F0C99A391CD793E80051C7D9 /* Avatar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avatar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -970,7 +968,6 @@
 			isa = PBXGroup;
 			children = (
 				F0BB62FD1CE4714300409A9C /* captures */,
-				F0BB63051CE4714300409A9C /* file.JPG */,
 				F0BB63061CE4714300409A9C /* init.JPG */,
 				F0BB63071CE4714300409A9C /* photo.png */,
 			);
@@ -2385,7 +2382,6 @@
 				F0C99A491CD793E90051C7D9 /* Main.storyboard in Resources */,
 				F0BB630C1CE4714300409A9C /* 2016 in Resources */,
 				F0BB63081CE4714300409A9C /* 04:06:05:11-06-2016.png in Resources */,
-				F0BB630F1CE4714300409A9C /* file.JPG in Resources */,
 				F0F416B81CE08F27004D1F6A /* iosfwd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
