@@ -117,6 +117,19 @@
     // Update the view, if already loaded.
 }
 
+- (IBAction)Blanc:(id)sender{
+    [self.avatarView setAvatarColor : [NSColor whiteColor]];
+     }
+
+- (IBAction)Rouge:(id)sender{
+    [self.avatarView setAvatarColor:[NSColor redColor]];
+}
+
+- (IBAction)Vert:(id)sender{
+    [self.avatarView setAvatarColor:[NSColor greenColor]];
+}
+
+
 - (IBAction)toggleAvatar:(id)sender {
     if(self.avatarView.showAvatar)
         [self.avatarView setShowAvatar : false];

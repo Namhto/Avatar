@@ -48,6 +48,31 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Couleur" id="cJZ-km-Kl1" userLabel="Couleur">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Couleur" id="jgK-B0-Y0F">
+                                    <items>
+                                        <menuItem title="Blanc" id="vKL-g3-0gW">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Blanc:" target="Ady-hI-5gd" id="O9a-Lq-ebb"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Rouge" id="EXE-Fb-08m">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Rouge:" target="Ady-hI-5gd" id="qaf-9q-YVo"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Vert" id="arV-0q-gRB">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Vert:" target="Ady-hI-5gd" id="h1N-WQ-3V3"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                             <menuItem title="Vue" id="H8h-7b-M4v" userLabel="Vue">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Vue" id="HyV-fh-RgO">
