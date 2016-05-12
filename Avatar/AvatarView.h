@@ -13,4 +13,6 @@
 @property (strong) NSImage *image;
 @property NSBezierPath *facesPath;
 
+- (void) takePicture;
+
 @end

@@ -14,6 +14,7 @@
 
 - (void)viewWillAppear {
     
+    [self.photo setImage:[[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/Avatar/Avatar/ressources/photo.png"]];
     self.photos = [[NSImage alloc] init];
     self.faceDetection = [[FaceDetection alloc] init];
     
@@ -22,16 +23,20 @@
 
     [super viewDidLoad];
     [super viewWillAppear];
-    
-    [self.cameraView initView];
+        
     [self initCapturSeesion];
+    
+    [session startRunning];
+    
+    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 0.05 target: self
+                                                      selector: @selector(photo:) userInfo: nil repeats: YES];
 }
 
 - (void)startDetection{
 
     // Face detection
-    NSBezierPath *facesPath = [self.faceDetection processImage];
-    self.avatarView.image = [[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/Projet 2016/Avatar/file.JPG"];
+    NSBezierPath *facesPath = [self.faceDetection processImage : @"/Users/projet2a/Desktop/Avatar/Avatar/ressources/file.JPG"];
+    self.avatarView.image = [[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/Avatar/Avatar/ressources/file.JPG"];
     
     // Update view
     
@@ -59,20 +64,7 @@
     [still_image setOutputSettings : output_settings];
     
     [session addOutput:still_image];
-}
-
-- (IBAction)start:(id)sender {
-    [session startRunning];
-    NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 0.1 target: self
-                                                      selector: @selector(photo:) userInfo: nil repeats: YES];
-}
-
-- (IBAction)stop:(id)sender {
-    [session stopRunning];
-}
-
-- (void)photo : (NSTimer*) t {
-
+    
     video_connection = nil;
     
     for(AVCaptureConnection *connection in still_image.connections) {
@@ -88,6 +80,19 @@
             break;
     }
     
+    NSMenu *mainMenu = [[NSApplication sharedApplication] mainMenu];
+    NSMenu *appMenu = [[mainMenu itemAtIndex:0] submenu];
+    for (NSMenuItem *item in [appMenu itemArray]) {
+        NSLog(@"%@", [item title]);
+    }
+}
+
+- (IBAction)takePicture:(id)sender {
+    [self.avatarView takePicture];
+}
+
+- (void)photo : (NSTimer*) t {
+    
     [still_image captureStillImageAsynchronouslyFromConnection:video_connection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         
          if(imageDataSampleBuffer != nil) {
@@ -99,8 +104,7 @@
          }
     }];
     
-    [self.cameraView drawImage: self.photos];
-    [self.data writeToFile: @"/Users/projet2a/Desktop/Projet 2016/Avatar/file.JPG" atomically: NO];
+    [self.data writeToFile: @"/Users/projet2a/Desktop/Avatar/Avatar/ressources/file.JPG" atomically: NO];
     
     if(self.photos != nil)
         [self startDetection];

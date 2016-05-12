@@ -13,7 +13,6 @@
 #include "dlib/image_processing.h"
 #include "dlib/serialize.h"
 #include "dlib/image_io.h"
-#include "ImageConverter.h"
 
 using namespace dlib;
 
@@ -26,35 +25,23 @@ using namespace dlib;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        // We need a face detector.  We will use this to get bounding boxes for
-        // each face in an image.
         detector = get_frontal_face_detector();
-        // And we also need a shape_predictor.  This is the tool that will predict face
-        // landmark positions given an image and face bounding box.  Here we are just
-        // loading the model from the shape_predictor_68_face_landmarks.dat file you gave
-        // as a command line argument.
-        NSString *path = @"/Users/projet2a/Desktop/Projet 2016/Avatar/shape_predictor_68_face_landmarks.dat";
+
+        NSString *path = @"/Users/projet2a/Desktop/Avatar/Avatar/shape_predictor_68_face_landmarks.dat";
         deserialize([path UTF8String]) >> sp;
     }
     return self;
 }
 
-- (NSBezierPath *)processImage//:(NSImage *)image
+- (NSBezierPath *)processImage :(NSString *)imagePath
 {
     array2d<rgb_pixel> img;
     
-    //[ImageConverter convert:image : img];
-    load_image(img, "/Users/projet2a/Desktop/Projet 2016/Avatar/file.JPG");
-    // Make the image larger so we can detect small faces.
-    //pyramid_up(img);
-    
-    // Now tell the face detector to give us a list of bounding boxes
-    // around all the faces in the image.
+    load_image(img, [imagePath UTF8String]);
+
     std::vector<rectangle> dets = detector(img);
     std::cout << "Number of faces detected: " << dets.size() << std::endl;
     
-    // Now we will go ask the shape_predictor to tell us the pose of
-    // each face we detected.
     std::vector<full_object_detection> shapes;
     for (unsigned long j = 0; j < dets.size(); ++j)
     {
@@ -62,9 +49,7 @@ using namespace dlib;
         std::cout << "number of parts: "<< shape.num_parts() << std::endl;
         std::cout << "pixel position of first part:  " << shape.part(0) << std::endl;
         std::cout << "pixel position of second part: " << shape.part(1) << std::endl;
-        // You get the idea, you can get all the face part locations if
-        // you want them.  Here we just store them in shapes so we can
-        // put them on the screen.
+
         shapes.push_back(shape);
     }
     return [self renderFaceDetections:shapes offset:img.nr()];

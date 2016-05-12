@@ -7,7 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "CameraView.h"
 #import "AvatarView.h"
 #import <AVFoundation/AVFoundation.h>
 #import "FaceDetection.h"
@@ -18,13 +17,14 @@
     AVCaptureStillImageOutput *still_image;
 }
 
-@property (nonatomic, retain) IBOutlet CameraView *cameraView;
 @property (nonatomic, retain) IBOutlet AvatarView *avatarView;
-@property (weak) IBOutlet NSButton *start;
-@property (weak) IBOutlet NSButton *stop;
+
 @property (strong) NSImage *photos;
 @property (strong) NSData *data;
+
 @property FaceDetection *faceDetection;
+
+@property (strong) IBOutlet NSButton *photo;
 
 
 
@@ -33,8 +33,7 @@
 - (void) initCapturSeesion;
 - (void) photo:(NSTimer*) t;
 
-- (IBAction)start:(id)sender;
-- (IBAction)stop:(id)sender;
+- (IBAction)takePicture:(id)sender;
 
 @end
 
