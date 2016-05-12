@@ -86,12 +86,6 @@
         if(video_connection)
             break;
     }
-    
-    NSMenu *mainMenu = [[NSApplication sharedApplication] mainMenu];
-    NSMenu *appMenu = [[mainMenu itemAtIndex:0] submenu];
-    for (NSMenuItem *item in [appMenu itemArray]) {
-        NSLog(@"%@", [item title]);
-    }
 }
 
 - (IBAction)takePicture:(id)sender {
