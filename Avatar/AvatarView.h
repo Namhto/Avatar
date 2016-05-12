@@ -13,6 +13,9 @@
 @property (strong) NSImage *image;
 @property NSBezierPath *facesPath;
 
+@property Boolean *showAvatar;
+@property Boolean *showCamera;
+
 - (void) takePicture;
 
 @end

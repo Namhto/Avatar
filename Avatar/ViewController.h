@@ -34,6 +34,8 @@
 - (void) photo:(NSTimer*) t;
 
 - (IBAction)takePicture:(id)sender;
+- (IBAction)toggleAvatar:(id)sender;
+- (IBAction)toggleCamera:(id)sender;
 
 @end
 

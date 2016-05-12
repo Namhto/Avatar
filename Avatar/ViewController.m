@@ -116,4 +116,17 @@
     // Update the view, if already loaded.
 }
 
+- (IBAction)toggleAvatar:(id)sender {
+    if(self.avatarView.showAvatar)
+        [self.avatarView setShowAvatar : false];
+    else
+        [self.avatarView setShowAvatar : true];
+}
+
+- (IBAction)toggleCamera:(id)sender {
+    if(self.avatarView.showCamera)
+        [self.avatarView setShowCamera : false];
+    else
+        [self.avatarView setShowCamera : true];
+}
 @end
