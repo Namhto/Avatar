@@ -38,8 +38,18 @@
 - (IBAction)toggleCamera:(id)sender;
 
 -(IBAction)Blanc:(id)sender;
+-(IBAction)Bleu:(id)sender;
+-(IBAction)Cyan:(id)sender;
+-(IBAction)Gris:(id)sender;
+-(IBAction)GrisFonce:(id)sender;
+-(IBAction)Jaune:(id)sender;
+-(IBAction)Magenta:(id)sender;
+-(IBAction)Marron:(id)sender;
+-(IBAction)Noir:(id)sender;
+-(IBAction)Orange:(id)sender;
 -(IBAction)Rouge:(id)sender;
 -(IBAction)Vert:(id)sender;
+-(IBAction)Violet:(id)sender;
 
 
 
