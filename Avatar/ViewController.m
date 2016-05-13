@@ -22,11 +22,12 @@
     
     [super viewDidLoad];
     [super viewWillAppear];
-        
+    
     [self initCapturSeesion];
     
     self.avatarView.showAvatar = true;
     self.avatarView.showCamera = true;
+    self.avatarView.showAvatarFill = false;
     
     [session startRunning];
     
@@ -35,7 +36,7 @@
 }
 
 - (void)startDetection{
-
+    
     // Face detection
     NSString *path;
     
@@ -44,17 +45,29 @@
     else
         path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"init.JPG"];
         
-    NSBezierPath *facesPath = [self.faceDetection processImage : path];
-    self.avatarView.image = [[NSImage alloc] initWithContentsOfFile : path];
+        NSBezierPath *facesPath = [self.faceDetection processImageForFill : path];
+        self.avatarView.image = [[NSImage alloc] initWithContentsOfFile : path];
+        
+        // Update view
+        
+        self.avatarView.facesPath = facesPath;
+        self.avatarView.needsDisplay = YES;
+    }
+    else{
+        NSBezierPath *facesPath = [self.faceDetection processImage : path];
+        self.avatarView.image = [[NSImage alloc] initWithContentsOfFile : path];
+        
+        // Update view
+        
+        self.avatarView.facesPath = facesPath;
+        self.avatarView.needsDisplay = YES;
+    }
     
-    // Update view
     
-    self.avatarView.facesPath = facesPath;
-    self.avatarView.needsDisplay = YES;
 }
 
 - (void) initCapturSeesion {
-
+    
     session = [[AVCaptureSession alloc] init];
     
     if([session canSetSessionPreset:AVCaptureSessionPresetLow]) {
@@ -62,7 +75,7 @@
     }
     
     AVCaptureDeviceInput *device_input = [[AVCaptureDeviceInput alloc] initWithDevice:
-                                           [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo][0] error:nil];
+                                          [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo][0] error:nil];
     
     if([session canAddInput:device_input])
         [session addInput:device_input];
@@ -102,13 +115,13 @@
     
     [still_image captureStillImageAsynchronouslyFromConnection:video_connection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         
-         if(imageDataSampleBuffer != nil) {
-             
-             NSData *data = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation: imageDataSampleBuffer];
-             
-             self.photos = [[NSImage alloc] initWithData:data];
-             self.data = [[NSData alloc] initWithData:data];
-         }
+        if(imageDataSampleBuffer != nil) {
+            
+            NSData *data = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation: imageDataSampleBuffer];
+            
+            self.photos = [[NSImage alloc] initWithData:data];
+            self.data = [[NSData alloc] initWithData:data];
+        }
     }];
     
     [self.data writeToFile: [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"file.JPG"] atomically: NO];
@@ -119,13 +132,13 @@
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-
+    
     // Update the view, if already loaded.
 }
 
 - (IBAction)Blanc:(id)sender{
     [self.avatarView setAvatarColor : [NSColor whiteColor]];
-     }
+}
 
 - (IBAction)Bleu:(id)sender{
     [self.avatarView setAvatarColor : [NSColor blueColor]];
@@ -181,7 +194,8 @@
     if(self.avatarView.showAvatar)
         [self.avatarView setShowAvatar : false];
     else
-        [self.avatarView setShowAvatar : true];
+        [self.avatarView setShowAvatarFill:false];
+    [self.avatarView setShowAvatar : true];
 }
 
 - (IBAction)toggleCamera:(id)sender {
@@ -189,5 +203,15 @@
         [self.avatarView setShowCamera : false];
     else
         [self.avatarView setShowCamera : true];
+}
+
+- (IBAction)toogleAvatarFill:(id)sender{
+    if(self.avatarView.showAvatarFill){
+        [self.avatarView setShowAvatarFill: false];
+    }
+    else{
+        [self.avatarView setShowAvatar : false];
+        [self.avatarView setShowAvatarFill : true];
+    }
 }
 @end
