@@ -26,6 +26,9 @@
         
     [self initCapturSeesion];
     
+    self.avatarView.showAvatar = true;
+    self.avatarView.showCamera = true;
+    
     [session startRunning];
     
     NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 0.05 target: self
@@ -121,12 +124,53 @@
     [self.avatarView setAvatarColor : [NSColor whiteColor]];
      }
 
+- (IBAction)Bleu:(id)sender{
+    [self.avatarView setAvatarColor : [NSColor blueColor]];
+}
+
+- (IBAction)Cyan:(id)sender{
+    [self.avatarView setAvatarColor : [NSColor cyanColor]];
+}
+
+- (IBAction)Gris:(id)sender{
+    [self.avatarView setAvatarColor : [NSColor grayColor]];
+}
+
+
+- (IBAction)GrisFonce:(id)sender{
+    [self.avatarView setAvatarColor : [NSColor darkGrayColor]];
+}
+
+- (IBAction)Jaune:(id)sender{
+    [self.avatarView setAvatarColor : [NSColor yellowColor]];
+}
+
+- (IBAction)Magenta:(id)sender{
+    [self.avatarView setAvatarColor : [NSColor magentaColor]];
+}
+
+- (IBAction)Marron:(id)sender{
+    [self.avatarView setAvatarColor : [NSColor brownColor]];
+}
+
+- (IBAction)Noir:(id)sender{
+    [self.avatarView setAvatarColor : [NSColor blackColor]];
+}
+
+- (IBAction)Orange:(id)sender{
+    [self.avatarView setAvatarColor : [NSColor orangeColor]];
+}
+
 - (IBAction)Rouge:(id)sender{
     [self.avatarView setAvatarColor:[NSColor redColor]];
 }
 
 - (IBAction)Vert:(id)sender{
     [self.avatarView setAvatarColor:[NSColor greenColor]];
+}
+
+- (IBAction)Violet:(id)sender{
+    [self.avatarView setAvatarColor:[NSColor purpleColor]];
 }
 
 

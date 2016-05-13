@@ -48,31 +48,6 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Couleur" id="cJZ-km-Kl1" userLabel="Couleur">
-                                <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Couleur" id="jgK-B0-Y0F">
-                                    <items>
-                                        <menuItem title="Blanc" id="vKL-g3-0gW">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="Blanc:" target="Ady-hI-5gd" id="O9a-Lq-ebb"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Rouge" id="EXE-Fb-08m">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="Rouge:" target="Ady-hI-5gd" id="qaf-9q-YVo"/>
-                                            </connections>
-                                        </menuItem>
-                                        <menuItem title="Vert" id="arV-0q-gRB">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <connections>
-                                                <action selector="Vert:" target="Ady-hI-5gd" id="h1N-WQ-3V3"/>
-                                            </connections>
-                                        </menuItem>
-                                    </items>
-                                </menu>
-                            </menuItem>
                             <menuItem title="Vue" id="H8h-7b-M4v" userLabel="Vue">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Vue" id="HyV-fh-RgO">
@@ -87,6 +62,91 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="toggleAvatar:" target="Ady-hI-5gd" id="cSz-9T-ufm"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Couleur" id="cJZ-km-Kl1" userLabel="Couleur">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Couleur" id="jgK-B0-Y0F">
+                                    <items>
+                                        <menuItem title="Blanc" id="vKL-g3-0gW">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Blanc:" target="Ady-hI-5gd" id="O9a-Lq-ebb"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Bleu" id="mGH-mY-Luc">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Bleu:" target="Ady-hI-5gd" id="CIM-gz-WXl"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Cyan" id="O5t-iR-F0i">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Cyan:" target="Ady-hI-5gd" id="Ejv-yR-Uzb"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Gris" id="FLw-ro-XHZ">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Gris:" target="Ady-hI-5gd" id="AZz-VP-P76"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Gris foncé" id="tcK-KS-1kf">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="GrisFonce:" target="Ady-hI-5gd" id="QJT-lP-8I9"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Jaune" id="Tgm-fm-dxw">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Jaune:" target="Ady-hI-5gd" id="Hzg-Pj-MhN"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Magenta" id="Vvr-oT-RQi">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Magenta:" target="Ady-hI-5gd" id="SPR-2q-PuH"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Marron" id="IuQ-pu-FLO">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Marron:" target="Ady-hI-5gd" id="oZd-R8-bKm"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Noir" id="woP-On-2BK">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Noir:" target="Ady-hI-5gd" id="1FG-fn-o3h"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Orange" id="EPw-H0-Tql">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Orange:" target="Ady-hI-5gd" id="gMU-ia-oIj"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Rouge" id="EXE-Fb-08m">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Rouge:" target="Ady-hI-5gd" id="qaf-9q-YVo"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Vert" id="arV-0q-gRB">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Vert:" target="Ady-hI-5gd" id="h1N-WQ-3V3"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Violet" id="wVA-uu-Jpe">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="Violet:" target="Ady-hI-5gd" id="7d5-Qn-5bO"/>
                                             </connections>
                                         </menuItem>
                                     </items>
