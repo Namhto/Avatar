@@ -15,6 +15,7 @@
 
 @property Boolean *showAvatar;
 @property Boolean *showCamera;
+@property Boolean *showAvatarFill;
 
 @property (strong) NSColor *avatarColor;
 

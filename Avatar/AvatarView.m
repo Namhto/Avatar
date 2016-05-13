@@ -24,9 +24,17 @@
     
     if(self.showAvatar)
         if (self.facesPath != nil) {
-           // [[NSColor redColor] setStroke];
             [self.avatarColor setStroke];
             [self.facesPath stroke];
+            
+        }
+    
+    if(self.showAvatarFill)
+        if(self.facesPath != nil){
+            [self.avatarColor setStroke];
+            [self.facesPath stroke];
+            [self.avatarColor setFill];
+            [self.facesPath fill];
         }
 }
 
