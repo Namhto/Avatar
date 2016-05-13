@@ -27,7 +27,7 @@ using namespace dlib;
     if (self) {
         detector = get_frontal_face_detector();
 
-        NSString *path = @"/Users/projet2a/Desktop/Avatar/Avatar/shape_predictor_68_face_landmarks.dat";
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"shape_predictor_68_face_landmarks" ofType:@"dat"];
         deserialize([path UTF8String]) >> sp;
     }
     return self;

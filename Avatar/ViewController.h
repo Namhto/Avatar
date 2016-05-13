@@ -26,8 +26,6 @@
 
 @property (strong) IBOutlet NSButton *photo;
 
-
-
 - (void)startDetection;
 
 - (void) initCapturSeesion;

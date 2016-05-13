@@ -36,7 +36,7 @@
     
     NSData *data = [screen TIFFRepresentation];
     
-    NSString *path = @"/Users/projet2a/Desktop/Avatar/Avatar/ressources/captures/";
+    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/Captures/"];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"ss-mm-hh-ddmmyyyy"];

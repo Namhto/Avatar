@@ -13,14 +13,13 @@
 
 
 - (void)viewWillAppear {
+        
+    NSString *photoButtonPath = [[NSBundle mainBundle] pathForResource:@"photo" ofType:@"png"];
     
-    [self.photo setImage:[[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/Avatar/Avatar/ressources/photo.png"]];
+    [self.photo setImage:[[NSImage alloc] initWithContentsOfFile:photoButtonPath]];
     self.photos = [[NSImage alloc] init];
     self.faceDetection = [[FaceDetection alloc] init];
     
-    //NSImage *image = [[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/file.JPG"];
-    //self.avatarView.image = image;
-
     [super viewDidLoad];
     [super viewWillAppear];
         
@@ -40,10 +39,10 @@
     // Face detection
     NSString *path;
     
-    if([[NSFileManager defaultManager] fileExistsAtPath:@"/Users/projet2a/Desktop/Avatar/Avatar/ressources/file.JPG"])
-        path = @"/Users/projet2a/Desktop/Avatar/Avatar/ressources/file.JPG";
+    if([[NSFileManager defaultManager] fileExistsAtPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"file.JPG"]])
+        path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"file.JPG"];
     else
-        path = @"/Users/projet2a/Desktop/Avatar/Avatar/ressources/init.JPG";
+        path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"init.JPG"];
         
     NSBezierPath *facesPath = [self.faceDetection processImage : path];
     self.avatarView.image = [[NSImage alloc] initWithContentsOfFile : path];
@@ -58,8 +57,8 @@
 
     session = [[AVCaptureSession alloc] init];
     
-    if([session canSetSessionPreset:AVCaptureSessionPresetHigh]) {
-        [session setSessionPreset:AVCaptureSessionPresetHigh];
+    if([session canSetSessionPreset:AVCaptureSessionPresetLow]) {
+        [session setSessionPreset:AVCaptureSessionPresetLow];
     }
     
     AVCaptureDeviceInput *device_input = [[AVCaptureDeviceInput alloc] initWithDevice:
@@ -89,6 +88,10 @@
         if(video_connection)
             break;
     }
+    
+    video_connection.automaticallyAdjustsVideoMirroring = NO;
+    video_connection.videoMirrored = YES;
+    
 }
 
 - (IBAction)takePicture:(id)sender {
@@ -108,7 +111,7 @@
          }
     }];
     
-    [self.data writeToFile: @"/Users/projet2a/Desktop/Avatar/Avatar/ressources/file.JPG" atomically: NO];
+    [self.data writeToFile: [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"file.JPG"] atomically: NO];
     
     if(self.photos != nil)
         [self startDetection];

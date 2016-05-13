@@ -16,12 +16,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
-    NSMenu *mainMenu = [[NSApplication sharedApplication] mainMenu];
-    NSMenu *appMenu = [[mainMenu itemAtIndex:0] submenu];
-    
-    for (NSMenuItem *item in [appMenu itemArray]) {
-        NSLog(@"%@", [item title]);
-    }
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
