@@ -64,6 +64,12 @@
                                                 <action selector="toggleAvatar:" target="Ady-hI-5gd" id="cSz-9T-ufm"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="Masque" id="TRj-5c-aAU">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="toggleAvatarFill:" target="Ady-hI-5gd" id="yCC-bX-Uam"/>
+                                            </connections>
+                                        </menuItem>
                                     </items>
                                 </menu>
                             </menuItem>

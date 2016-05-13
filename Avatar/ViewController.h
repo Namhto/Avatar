@@ -34,7 +34,7 @@
 - (IBAction)takePicture:(id)sender;
 - (IBAction)toggleAvatar:(id)sender;
 - (IBAction)toggleCamera:(id)sender;
-- (IBAction)toogleAvatarFill:(id)sender;
+- (IBAction)toggleAvatarFill:(id)sender;
 
 -(IBAction)Blanc:(id)sender;
 -(IBAction)Bleu:(id)sender;

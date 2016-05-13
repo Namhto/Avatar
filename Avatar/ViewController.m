@@ -20,6 +20,9 @@
     self.photos = [[NSImage alloc] init];
     self.faceDetection = [[FaceDetection alloc] init];
     
+    //NSImage *image = [[NSImage alloc] initWithContentsOfFile:@"/Users/projet2a/Desktop/file.JPG"];
+    //self.avatarView.image = image;
+    
     [super viewDidLoad];
     [super viewWillAppear];
     
@@ -44,6 +47,9 @@
         path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"file.JPG"];
     else
         path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"init.JPG"];
+    
+    //Ajout du if
+    if(self.avatarView.showAvatarFill == true && self.avatarView.showAvatar==false){
         
         NSBezierPath *facesPath = [self.faceDetection processImageForFill : path];
         self.avatarView.image = [[NSImage alloc] initWithContentsOfFile : path];
@@ -205,7 +211,7 @@
         [self.avatarView setShowCamera : true];
 }
 
-- (IBAction)toogleAvatarFill:(id)sender{
+- (IBAction)toggleAvatarFill:(id)sender{
     if(self.avatarView.showAvatarFill){
         [self.avatarView setShowAvatarFill: false];
     }
