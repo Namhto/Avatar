@@ -32,6 +32,15 @@
     self.avatarView.showCamera = true;
     self.avatarView.showAvatarFill = false;
     
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *folderURL = [documentsDirectory stringByAppendingString:@"/Captures Avatar/"];
+    
+    BOOL isDir;
+    NSFileManager *fileManager= [NSFileManager defaultManager];
+    if(![fileManager fileExistsAtPath:folderURL isDirectory:&isDir])
+        [fileManager createDirectoryAtPath:folderURL withIntermediateDirectories:YES attributes:nil error:NULL];
+    
     [session startRunning];
     
     NSTimer* myTimer = [NSTimer scheduledTimerWithTimeInterval: 0.05 target: self
@@ -219,5 +228,13 @@
         [self.avatarView setShowAvatar : false];
         [self.avatarView setShowAvatarFill : true];
     }
+}
+
+-(IBAction)toCaptures:(id)sender {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSURL *folderURL = [NSURL fileURLWithPath: [documentsDirectory stringByAppendingString:@"/Captures Avatar/"]];
+    [[NSWorkspace sharedWorkspace] openURL: folderURL];
 }
 @end

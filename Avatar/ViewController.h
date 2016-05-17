@@ -50,6 +50,7 @@
 -(IBAction)Vert:(id)sender;
 -(IBAction)Violet:(id)sender;
 
+-(IBAction)toCaptures:(id)sender;
 
 
 @end
