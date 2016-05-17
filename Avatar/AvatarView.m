@@ -44,7 +44,9 @@
     
     NSData *data = [screen TIFFRepresentation];
     
-    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/Captures/"];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingString:@"/Captures Avatar/"];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"ss-mm-hh-ddmmyyyy"];

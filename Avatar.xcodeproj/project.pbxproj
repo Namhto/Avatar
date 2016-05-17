@@ -18,6 +18,7 @@
 		F0C99A491CD793E90051C7D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0C99A471CD793E90051C7D9 /* Main.storyboard */; };
 		F0C99A541CD793E90051C7D9 /* AvatarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A531CD793E90051C7D9 /* AvatarTests.m */; };
 		F0C99A5F1CD793E90051C7D9 /* AvatarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A5E1CD793E90051C7D9 /* AvatarUITests.m */; };
+		F0F045FB1CEB04540049036E /* shape_predictor_68_face_landmarks.dat in Resources */ = {isa = PBXBuildFile; fileRef = F0A3C53D1CE1DC2200731433 /* shape_predictor_68_face_landmarks.dat */; };
 		F0F4165A1CE08F27004D1F6A /* base64_kernel_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0F4134A1CE08F26004D1F6A /* base64_kernel_1.cpp */; };
 		F0F4165B1CE08F27004D1F6A /* dir_nav_extensions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0F413711CE08F26004D1F6A /* dir_nav_extensions.cpp */; };
 		F0F4165C1CE08F27004D1F6A /* dir_nav_kernel_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F0F413741CE08F26004D1F6A /* dir_nav_kernel_1.cpp */; };
@@ -2349,6 +2350,7 @@
 				F0F4168E1CE08F27004D1F6A /* README in Resources */,
 				F0C99A461CD793E80051C7D9 /* Assets.xcassets in Resources */,
 				F0F416B71CE08F27004D1F6A /* iomanip in Resources */,
+				F0F045FB1CEB04540049036E /* shape_predictor_68_face_landmarks.dat in Resources */,
 				F0F416B61CE08F27004D1F6A /* cassert in Resources */,
 				F0F416B91CE08F27004D1F6A /* iostream in Resources */,
 				F0BB63111CE4714300409A9C /* photo.png in Resources */,
