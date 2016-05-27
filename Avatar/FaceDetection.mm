@@ -166,23 +166,19 @@ using namespace dlib;
         
         [self path:path moveToPoint:d.part(0) offset:offset];
         
-        //Ajout
-        NSPoint pt1 = NSMakePoint(d.part(0).x(),d.part(0).y()-40);
+       //Ajout
+        NSPoint pt1 = NSMakePoint(d.part(0).x()+(d.part(0).x()-d.part(1).x()),d.part(0).y()-40);
         [self path:path lineToNSPoint:pt1 offset:offset]; // Permet de metre 1 point suplémentaire a 40px plus haut
         //Fin ajout
-        
+        [self path:path moveToPoint:d.part(0) offset:offset];
         for (unsigned long i = 1; i <= 16; ++i)
             [self path:path lineToPoint:d.part(i) offset:offset]; // Courbe du contour du visage
         
         // Ajout
-        NSPoint pt2 = NSMakePoint(d.part(16).x(),d.part(16).y()-40);
+        NSPoint pt2 = NSMakePoint(d.part(16).x()+(d.part(16).x()-d.part(15).x()),d.part(16).y()-40);
         [self path:path lineToNSPoint:pt2 offset:offset]; // Permet de metre 1 point suplémentaire a 40px plus haut
         [self path:path lineToNSPoint:pt1 offset:offset];
         // Fin ajout
-        
-        [self path:path moveToPoint:d.part(27) offset:offset];
-        for (unsigned long i = 28; i <= 30; ++i)
-            [self path:path lineToPoint:d.part(i) offset:offset]; // Ligne du nez
         
         [self path:path moveToPoint:d.part(17) offset:offset];
         for (unsigned long i = 18; i <= 21; ++i)
@@ -191,11 +187,6 @@ using namespace dlib;
         [self path:path moveToPoint:d.part(22) offset:offset];
         for (unsigned long i = 23; i <= 26; ++i)
             [self path:path lineToPoint:d.part(i) offset:offset]; // sourcil
-        
-        [self path:path moveToPoint:d.part(30) offset:offset];
-        for (unsigned long i = 31; i <= 35; ++i)
-            [self path:path lineToPoint:d.part(i) offset:offset]; // dessine le nez
-        [self path:path lineToPoint:d.part(30) offset:offset]; // lie le nez au sourcil sans cette ligne
         
         [self path:path moveToPoint:d.part(36) offset:offset];
         for (unsigned long i = 37; i <= 41; ++i)

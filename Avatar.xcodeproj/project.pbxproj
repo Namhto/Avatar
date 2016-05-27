@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F001D9CF1CD8D2E100D71E33 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F001D9CE1CD8D2E100D71E33 /* ViewController.m */; };
+		F04BA5951CF82F8900E9330C /* init.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F04BA5941CF82F8900E9330C /* init.JPG */; };
 		F067D2811CE072F30068DBDF /* FaceDetection.mm in Sources */ = {isa = PBXBuildFile; fileRef = F067D2801CE072F30068DBDF /* FaceDetection.mm */; };
 		F0B6A2651CD87F41003475E0 /* AvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F0B6A2641CD87F41003475E0 /* AvatarView.m */; };
-		F0BB63101CE4714300409A9C /* init.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F0BB63061CE4714300409A9C /* init.JPG */; };
 		F0BB63111CE4714300409A9C /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = F0BB63071CE4714300409A9C /* photo.png */; };
 		F0C99A3E1CD793E80051C7D9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A3D1CD793E80051C7D9 /* AppDelegate.m */; };
 		F0C99A411CD793E80051C7D9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0C99A401CD793E80051C7D9 /* main.m */; };
@@ -145,12 +145,12 @@
 
 /* Begin PBXFileReference section */
 		F001D9CE1CD8D2E100D71E33 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F04BA5941CF82F8900E9330C /* init.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = init.JPG; path = ../../../../Downloads/init.JPG; sourceTree = "<group>"; };
 		F067D2801CE072F30068DBDF /* FaceDetection.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FaceDetection.mm; sourceTree = "<group>"; };
 		F067D2821CE073190068DBDF /* FaceDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceDetection.h; sourceTree = "<group>"; };
 		F0A3C53D1CE1DC2200731433 /* shape_predictor_68_face_landmarks.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = shape_predictor_68_face_landmarks.dat; sourceTree = "<group>"; };
 		F0B6A2631CD87F41003475E0 /* AvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvatarView.h; sourceTree = "<group>"; };
 		F0B6A2641CD87F41003475E0 /* AvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvatarView.m; sourceTree = "<group>"; };
-		F0BB63061CE4714300409A9C /* init.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = init.JPG; sourceTree = "<group>"; };
 		F0BB63071CE4714300409A9C /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		F0C99A391CD793E80051C7D9 /* Avatar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avatar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0C99A3C1CD793E80051C7D9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -955,7 +955,7 @@
 			isa = PBXGroup;
 			children = (
 				F0BB62FD1CE4714300409A9C /* captures */,
-				F0BB63061CE4714300409A9C /* init.JPG */,
+				F04BA5941CF82F8900E9330C /* init.JPG */,
 				F0BB63071CE4714300409A9C /* photo.png */,
 			);
 			path = ressources;
@@ -2345,12 +2345,12 @@
 			files = (
 				F0F416AC1CE08F27004D1F6A /* README in Resources */,
 				F0F416BA1CE08F27004D1F6A /* locale in Resources */,
-				F0BB63101CE4714300409A9C /* init.JPG in Resources */,
 				F0F4169F1CE08F27004D1F6A /* README in Resources */,
 				F0F4168E1CE08F27004D1F6A /* README in Resources */,
 				F0C99A461CD793E80051C7D9 /* Assets.xcassets in Resources */,
 				F0F416B71CE08F27004D1F6A /* iomanip in Resources */,
 				F0F045FB1CEB04540049036E /* shape_predictor_68_face_landmarks.dat in Resources */,
+				F04BA5951CF82F8900E9330C /* init.JPG in Resources */,
 				F0F416B61CE08F27004D1F6A /* cassert in Resources */,
 				F0F416B91CE08F27004D1F6A /* iostream in Resources */,
 				F0BB63111CE4714300409A9C /* photo.png in Resources */,
