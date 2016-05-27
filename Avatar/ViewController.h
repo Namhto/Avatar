@@ -50,6 +50,10 @@
 -(IBAction)Vert:(id)sender;
 -(IBAction)Violet:(id)sender;
 
+- (IBAction)epaisseurFine:(id)sender;
+- (IBAction)epaisseurNormale:(id)sender;
+- (IBAction)epaisseurEpaisse:(id)sender;
+
 -(IBAction)toCaptures:(id)sender;
 
 

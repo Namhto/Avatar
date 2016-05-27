@@ -25,7 +25,9 @@
     if(self.showAvatar)
         if (self.facesPath != nil) {
             [self.avatarColor setStroke];
+            self.facesPath.lineWidth = self.lineWidth;
             [self.facesPath stroke];
+            
             
         }
     

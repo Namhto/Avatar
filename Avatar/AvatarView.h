@@ -19,6 +19,8 @@
 
 @property (strong) NSColor *avatarColor;
 
+@property CGFloat lineWidth;
+
 - (void) takePicture;
 
 @end

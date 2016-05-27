@@ -165,6 +165,31 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Trait" id="FnO-Wz-ECw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Trait" id="9w8-7B-Zl3">
+                                    <items>
+                                        <menuItem title="Fin" id="mUi-9c-bPH">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="epaisseurFine:" target="Ady-hI-5gd" id="9FJ-bb-lBX"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Normal" id="PNF-9h-te2">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="epaisseurNormale:" target="Ady-hI-5gd" id="j1N-6U-agk"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Epais" id="ta6-BD-yaX">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="epaisseurEpaisse:" target="Ady-hI-5gd" id="74c-0n-oz7"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                             <menuItem title="Aide" id="wpr-3q-Mcd">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Aide" systemMenu="help" id="F2S-fz-NVQ">

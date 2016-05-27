@@ -230,6 +230,18 @@
     }
 }
 
+- (IBAction)epaisseurFine:(id)sender{
+    [self.avatarView setLineWidth : 1];
+}
+
+- (IBAction)epaisseurNormale:(id)sender{
+    [self.avatarView setLineWidth : 2.5];
+}
+
+- (IBAction)epaisseurEpaisse:(id)sender{
+    [self.avatarView setLineWidth : 5];
+}
+
 -(IBAction)toCaptures:(id)sender {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
